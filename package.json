@@ -10,8 +10,8 @@
         "publish": "npm run build && npm publish --access public"
     },
     "files": [
-        "dist/index.js",
-        "dist/index.js.map"
+        "index.js",
+        "index.js.map"
     ],
     "devDependencies": {
         "@babel/cli": "^7.7.0",
