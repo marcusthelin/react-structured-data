@@ -1,8 +1,11 @@
 {
     "name": "@24hr/react-structured-data",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "A React component to render structured data",
     "main": "index.js",
+    "repository": {
+        "url": "https://github.com/Macke97/react-structured-data"
+    },
     "author": "Marcus Thelin",
     "license": "MIT",
     "scripts": {
