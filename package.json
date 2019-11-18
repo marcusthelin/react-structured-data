@@ -1,0 +1,8 @@
+{
+  "name": "structured-data-react",
+  "version": "0.0.1",
+  "description": "A React component to render structured data",
+  "main": "index.js",
+  "author": "Marcus Thelin",
+  "license": "MIT"
+}
