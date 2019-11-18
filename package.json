@@ -1,13 +1,14 @@
 {
     "name": "@24hr/react-structured-data",
-    "version": "0.0.2",
+    "version": "0.0.5",
     "description": "A React component to render structured data",
-    "main": "dist/index.js",
+    "main": "index.js",
     "author": "Marcus Thelin",
     "license": "MIT",
     "scripts": {
         "build": "babel src --out-file index.js --source-maps",
-        "publish": "npm run build && npm publish --access public"
+        "prepublish": "npm run build",
+        "publish": "npm publish --access public"
     },
     "files": [
         "index.js",
