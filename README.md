@@ -16,34 +16,43 @@ import StructuredData from '@24hr/react-structured-data';
 <StructuredData type={structureDataType} {...structuredDataObject} />
 ```
 
-## Props
+## Props - General
 
 | Prop    |       Type        |      Default       |
-| ------- | :---------------: | :----------------: |
+|---------|:-----------------:|:------------------:|
 | context |      string       | https://schema.org |
 | type    | string (required) |     undefined      |
 
 You can then pass it whatever structured data compatible objects as you want. These are just passed along.
 
+## Props - FAQPage component
+| Prop      |       Type       | Default |
+|-----------|:----------------:|:-------:|
+| questions | array (required) |         |
+
+A question object should have the structure:
+```js
+{
+    question: String,
+    answer: String
+}
+```
+
 ## Example - FAQ Page
 
+Import the built-in FAQPage component
 ```jsx
 import React from 'react';
-import StructuredData from '@24hr/react-structured-data';
+import { FAQPage } from '@24hr/react-structured-data';
 
 const App = () => (
     <div>
         {/* Your content */}
-        <StructuredData
-            type="FAQPage"
-            mainEntity={[
+        <FAQPage
+            questions={[
                 {
-                    '@type': 'Question',
-                    name: 'This is a question',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'This is an answer'
-                    }
+                    question: 'Test',
+                    answer: 'Okey'
                 }
             ]}
         />
