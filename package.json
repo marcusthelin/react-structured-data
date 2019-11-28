@@ -1,27 +1,33 @@
 {
     "name": "@24hr/react-structured-data",
-    "version": "0.0.6",
+    "version": "1.0.0-beta.0",
     "description": "A React component to render structured data",
-    "main": "index.js",
+    "main": "dist/index.js",
     "repository": {
         "url": "https://github.com/Macke97/react-structured-data"
     },
     "author": "Marcus Thelin",
     "license": "MIT",
     "scripts": {
-        "build": "babel src --out-file index.js --source-maps",
-        "prepublish": "npm run build",
-        "publish": "npm publish --access public"
+        "build:prod": "webpack --config webpack.prod.js",
+        "build": "webpack",
+        "build:babel": "babel src --out-dir dist --source-maps",
+        "prepublishh": "npm run build:prod",
+        "deploy": "npm publish --access public",
+        "dev": "webpack-dev-server"
     },
-    "files": [
-        "index.js",
-        "index.js.map"
-    ],
     "devDependencies": {
         "@babel/cli": "^7.7.0",
-        "@babel/core": "^7.7.2",
-        "@babel/preset-env": "^7.7.1",
-        "@babel/preset-react": "^7.7.0"
+        "@babel/core": "^7.2.2",
+        "@babel/preset-env": "^7.3.1",
+        "@babel/preset-react": "^7.7.0",
+        "babel-loader": "^8.0.5",
+        "html-webpack-plugin": "^3.2.0",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "webpack": "^4.29.0",
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.1.14"
     },
     "peerDependencies": {
         "react": "^16.12.0",

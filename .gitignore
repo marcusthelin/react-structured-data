@@ -2,3 +2,6 @@ node_modules
 .DS_Store
 /index.js
 /index.js.map
+client
+dist
+client-dist
